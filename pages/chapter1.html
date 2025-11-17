@@ -1,52 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal Farm: Historical Context Explorer</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the embedded content to ensure it scales nicely */
-        .embed-container {
-            /* 100% height minus the header height (e.g., 4rem) and padding/margin */
-            height: calc(100vh - 4rem - 2rem);
-            max-height: 800px; /* Optional max height for very large screens */
-            display: flex;
-            flex-direction: column;
-            overflow: auto;
-        }
+<!-- NOTE: This file is a content partial, designed to be dynamically loaded into index.html -->
+<div class="p-4"> 
 
-        /* Ensure the embedded script content respects the container size */
-        .rg_embed_link {
-            flex-grow: 1;
-        }
-
-        /* Set default font to Inter, as required */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb; /* Light background for a clean academic look */
-        }
-
-        /* Styling for the historical artifact panel */
-        .artifact-panel {
-            background-color: #ffffff;
-            border-left: 2px solid #e2e8f0;
-            padding: 1.5rem;
-            height: 100%;
-            overflow-y: auto;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-            border-radius: 0.5rem;
-        }
-    </style>
-</head>
-<body class="min-h-screen">
-
-    <!-- Top Header (The crossbar of the T) -->
-    <header class="bg-red-700 text-white shadow-lg p-4 sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto">
+    <!-- Content header -->
+    <header class="bg-red-700 text-white shadow-lg p-4 mb-4 rounded-lg">
+        <div class="max-w-full mx-auto">
             <h1 class="text-xl md:text-2xl font-extrabold tracking-tight">
-                Context Prompt: The Seeds of Revolution
+                Chapter 1 Context: The Seeds of Revolution (Old Major)
             </h1>
             <p class="text-sm opacity-90 mt-1">
                 How does Old Major's speech in Chapter 1 reflect the core communist ideals and the historical grievances outlined in the artifact below?
@@ -54,26 +13,30 @@
         </div>
     </header>
 
-    <!-- Main Content Area (The vertical bar of the T, divided into two columns) -->
-    <main class="max-w-7xl mx-auto p-4 flex flex-col lg:flex-row gap-4">
+    <!-- Main Content Area: Historical Left, Text Right -->
+    <main class="max-w-full mx-auto flex flex-col lg:flex-row gap-4">
 
-        <!-- Left Column: Embedded Text -->
-        <div class="lg:w-1/2 embed-container bg-white p-3 rounded-lg shadow-md border border-gray-200">
-            <h2 class="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">Literary Text: Animal Farm, Chapter 1</h2>
-            <!-- Embedded Genius Content (User-provided snippet used exactly) -->
-            <div id='rg_embed_link_197066' class='rg_embed_link' data-song-id='197066'>Read <a href='https://genius.com/George-orwell-animal-farm-chapter-1-annotated' class="text-red-600 hover:text-red-700 font-medium">“Animal Farm: Chapter 1” by George Orwell</a> on Genius</div>
-            <!-- FIX: Changed from //genius.com to https://genius.com for reliable loading -->
-            <script crossorigin src='https://genius.com/songs/197066/embed.js'></script> 
-        </div>
+        <!-- LEFT Column: Historical Artifact (Expanded Content) -->
+        <div class="lg:w-1/2"> 
+            <div class="artifact-panel h-full">
+                <h2 class="text-lg font-semibold text-red-700 mb-4 border-b pb-2">Historical Context: The Dawn of Russian Revolution and Marxism</h2>
 
-        <!-- Right Column: Historical Artifact -->
-        <div class="lg:w-1/2 embed-container">
-            <div class="artifact-panel">
-                <h2 class="text-lg font-semibold text-red-700 mb-4 border-b pb-2">Historical Artifact: The Communist Manifesto (1848)</h2>
-                
-                <p class="text-sm italic text-gray-500 mb-4">
-                    The ideas of Karl Marx and Friedrich Engels, which form the basis of Communism, are often allegorized through Old Major's principles. This excerpt directly addresses the conflict between the oppressed working class (proletariat) and the owning class (bourgeoisie).
+                <!-- NEW EXPANDED CONTENT START -->
+                <p class="text-sm text-gray-700 mb-4">
+                    Chapter 1 of *Animal Farm* is the literary blueprint for the **Russian Revolution**. Old Major, the revered pig, represents **Karl Marx**, the German philosopher whose theories form the basis of Communism, known in the novel as 'Animalism'. Just as Major critiques Farmer Jones's oppressive regime, Marx's philosophy emerged as a response to the miserable conditions of the working class under autocratic and capitalistic rule.
                 </p>
+
+                <h3 class="text-base font-semibold text-gray-800 mt-4 mb-2">The Oppressive Tsarist Regime (Farmer Jones's Parallel)</h3>
+                <p class="text-sm italic text-gray-500 mb-4">
+                    Before the 1917 Revolution, Russia was ruled by **Tsar Nicholas II** (paralleling the incompetent Farmer Jones). His regime was marked by violence, economic neglect, and social unrest. Millions of peasants and factory workers suffered under terrible conditions and low wages while the royal family and wealthy landowners lived in luxury. The Tsar's disastrous decisions, particularly dragging Russia into unpopular wars, mirrored Jones's drunkenness and neglect, creating the perfect environment for a desperate, revolutionary uprising among the oppressed masses.
+                </p>
+
+                <h3 class="text-base font-semibold text-gray-800 mt-4 mb-2">The Core Philosophy: Class Struggle</h3>
+
+                <p class="text-sm italic text-gray-500 mb-4">
+                    The ideas of **Karl Marx** and **Friedrich Engels**, which form the basis of Communism, are often allegorized through Old Major's principles. This excerpt directly addresses the conflict between the oppressed working class (proletariat) and the owning class (bourgeoisie).
+                </p>
+                <!-- NEW EXPANDED CONTENT END -->
 
                 <blockquote class="border-l-4 border-red-700 pl-4 py-2 bg-red-50 rounded-md">
                     <p class="text-gray-700 mb-3">
@@ -89,14 +52,55 @@
 
                 <h3 class="text-base font-semibold text-gray-800 mt-6 mb-2">Guided Analysis Questions:</h3>
                 <ul class="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li><strong class="font-medium">Class Struggle:</strong> Where does Old Major identify the "oppressor" and the "oppressed" on Manor Farm, directly mirroring the Marxist idea of class struggle?</li>
+                    <li><strong class="font-medium">The Tyrant:</strong> In the context of the Tsarist regime, how does Farmer Jones specifically embody the neglect and oppression that leads to the animals' "Bloody Sunday" moment?</li>
+                    <li><strong class="font-medium">Class Struggle:</strong> Where does Old Major identify the "oppressor" (Man/Bourgeoisie) and the "oppressed" (Animals/Proletariat) on Manor Farm, directly mirroring the Marxist idea of class struggle?</li>
                     <li><strong class="font-medium">Call to Action:</strong> What "revolutionary re-constitution of society" does the Manifesto call for, and how does Old Major's vision of 'Animalism' attempt to achieve a similar goal?</li>
-                    <li><strong class="font-medium">Motto:</strong> Connect the Manifesto's goal of "conquest of political power by the proletariat" to the animals' rallying cry and the central theme of "Beasts of England."</li>
+                    <li><strong class="font-medium">The Motive:</strong> Connect the Manifesto's goal of "conquest of political power by the proletariat" to the animals' rallying cry and the central theme of "Beasts of England."</li>
                 </ul>
             </div>
+        </div>
+        
+        <!-- RIGHT Column: Embedded Text (Simplified Container) -->
+        <div class="lg:w-1/2 embed-container bg-white p-3 rounded-lg shadow-md border border-gray-200">
+            <!-- New Header and Link for clarity -->
+            <h2 class="text-lg font-semibold text-gray-800 mb-3 border-b pb-2">Annotated Text: Animal Farm, Chapter 1 (via Genius)</h2>
+            <p class="text-sm text-gray-500 mb-4">
+                This embedded text provides line-by-line annotations from the community. <a href="https://genius.com/George-orwell-animal-farm-chapter-1-annotated" target="_blank" class="text-red-600 hover:text-red-800 font-medium underline">View the original source on Genius.com</a>.
+            </p>
+            
+            <!-- Embedded Genius Content -->
+            <div id='rg_embed_link_197066' class='rg_embed_link' data-song-id='197066'>
+                <p class="text-center text-gray-400 mt-12">
+                    Loading annotated text... If content does not appear, please use the link above.
+                </p>
+            </div> 
+            <script crossorigin src='https://genius.com/songs/197066/embed.js'></script>
         </div>
 
     </main>
 
-</body>
-</html>
+</div>
+
+<style>
+/* CSS definitions for the partial content (moved from original head) */
+.embed-container {
+    height: 100%;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.rg_embed_link {
+    flex-grow: 1;
+    /* Ensure a minimum height for the embedded content to render */
+    min-height: 400px; 
+}
+.artifact-panel {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+}
+</style>
