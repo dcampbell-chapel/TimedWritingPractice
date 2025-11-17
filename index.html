@@ -61,9 +61,9 @@
     </nav>
 
     <!-- Iframe Container to display chapter content -->
-    <!-- It initially loads chapter1.html -->
+    <!-- Path updated to include 'pages/' prefix -->
     <div class="iframe-container max-w-7xl mx-auto">
-        <iframe id="chapter-iframe" src="chapter1.html" title="Animal Farm Chapter Content"></iframe>
+        <iframe id="chapter-iframe" src="pages/chapter1.html" title="Animal Farm Chapter Content"></iframe>
     </div>
 
     <script>
@@ -90,8 +90,8 @@
                     event.preventDefault();
                     const chapterNum = parseInt(event.target.dataset.chapter);
                     
-                    // 1. Update the iframe source
-                    iframe.src = `chapter${chapterNum}.html`;
+                    // 1. Update the iframe source with the new 'pages/' path
+                    iframe.src = `pages/chapter${chapterNum}.html`;
                     
                     // 2. Update active link styling
                     document.querySelectorAll('.nav-link').forEach(l => {
@@ -115,7 +115,8 @@
                 if (match) {
                     const chapterNum = parseInt(match[1]);
                     if (chapterNum >= 1 && chapterNum <= totalChapters) {
-                        iframe.src = `chapter${chapterNum}.html`;
+                        // Load with new 'pages/' prefix
+                        iframe.src = `pages/chapter${chapterNum}.html`; 
                         document.querySelectorAll('.nav-link').forEach(l => {
                             l.classList.remove('active');
                             if (parseInt(l.dataset.chapter) === chapterNum) {
